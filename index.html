@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danfoss - Официальный поставщик оборудования</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <img src="img/Logo-red.png" alt="Danfoss Logo" />
+          </div>
+
+          <div class="mobile-header" onclick="openModal()">
+            <img class="mobile-header-logo" src="img/treeComo.png" alt="" />
+            <p style="margin-right: 20px">Меню</p>
+          </div>
+
+          <div id="modal-icon" class="modal-icon">
+            <div class="top">
+              <img
+                class="modal-icon-logo"
+                src="img/Logo-red.png"
+                alt="Danfoss Logo"
+              />
+              <img
+                onclick="closeModal()"
+                class="cross"
+                src="img/cross.png"
+                alt="error"
+              />
+            </div>
+            <ul>
+              <li class="elem" onclick="closeModal()">
+                <a href="#about">О компании</a>
+              </li>
+              <li class="elem" onclick="closeModal()">
+                <a href="#products">Продукция</a>
+              </li>
+              <li class="elem" onclick="closeModal()">
+                <a href="#advantages">Преимущества</a>
+              </li>
+              <li class="elem" onclick="closeModal()">
+                <a href="#orders">Заказы</a>
+              </li>
+              <li class="elem" onclick="closeModal()">
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+            <div class="bottom">
+              <a href="tel:+79955009032" class="phone">+7 (995) 500-90-32</a>
+              <div class="messengers">
+                <a
+                  class="center"
+                  href="https://api.whatsapp.com/send/?phone=79955009032&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  ><img class="imgH" src="img/whatsapp.png" alt="WhatsApp"
+                /></a>
+                <a class="center" href="https://t.me/danfossrus" target="_blank"
+                  ><img class="imgH" src="img/telegram.png" alt="Telegram"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#products">Продукция</a></li>
+              <li><a href="#advantages">Преимущества</a></li>
+              <li><a href="#orders">Заказы</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-contacts">
+            <a href="tel:+79955009032" class="phone">+7 (995) 500-90-32</a>
+            <div class="messengers">
+              <a
+                href="https://api.whatsapp.com/send/?phone=79955009032&text&type=phone_number&app_absent=0"
+                class="messenger whatsapp"
+                target="_blank"
+                ><img src="img/whatsapp.png" alt="WhatsApp"
+              /></a>
+              <a
+                href="https://t.me/danfossrus"
+                class="messenger telegram"
+                target="_blank"
+                ><img src="img/telegram.png" alt="Telegram"
+              /></a>
+            </div>
+            <a href="#" class="btn order-btn">Заказать сейчас</a>
+            <span class="contact-email">sales@danfossrus.com</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-slider">
+      <div class="slider-container">
+        <div class="slide active">
+          <div class="slide-content">
+            <h2>Поставка оборудования Danfoss от 5 дней по РФ и СНГ</h2>
+            <button style="max-width: 20vw" class="btn offer-btn">
+              Получить предложение
+            </button>
+          </div>
+          <div class="slide-bg">
+            <img src="img/slide 1.png" alt="Поставка оборудования Danfoss" />
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content imp">
+            <h2 clase="media-h2">
+              Гидравлические моторы, гидравлические насосы Danfoss-Sauer в
+              наличии и под заказ
+            </h2>
+            <h3>Полный ассортимент продукции</h3>
+            <button style="max-width: 20vw" class="btn offer-btn">
+              Получить предложение
+            </button>
+          </div>
+          <div class="slide-bg">
+            <img
+              src="img/slide 2.png"
+              alt="Гидравлические моторы Danfoss-Sauer"
+            />
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content light-text">
+            <h2>Официальный поставщик оборудования Danfoss</h2>
+            <h3>Индивидуальные цены под любое решение</h3>
+            <button style="max-width: 20vw" class="btn offer-btn">
+              Получить предложение
+            </button>
+          </div>
+          <div class="slide-bg">
+            <img src="img/slide 3.png" alt="Официальный поставщик Danfoss" />
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-prev">&lt;</button>
+          <button class="slider-next">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-feature">
+            <div class="feature-content">
+              <!-- Левая колонка: картинка -->
+              <div style="display: flex; justify-content: center">
+                <img
+                  src="img/Особенность Danfoss .png"
+                  alt="Особенность Danfoss"
+                  class="feature-image"
+                />
+              </div>
+
+              <!-- Правая колонка: заголовок над текстом -->
+              <div class="feature-text">
+                <h2>Особенность Danfoss</h2>
+                <p>
+                  Danfoss – это ведущий мировой бренд, специализирующийся на
+                  производстве тепловой автоматики, холодильной и приводной
+                  техники, а также промышленной автоматики. Оборудование Danfoss
+                  обладает полным набором характеристик, необходимых для
+                  обеспечения длительной и бесперебойной службы. Компания
+                  активно внедряет новые технологические решения, чтобы повысить
+                  производительность своей продукции и поддержать растущий рынок
+                  производителей.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dealer-section">
+      <div
+        style="display: flex; align-items: center; justify-content: center"
+        class="container"
+      >
+        <div class="dealer-content">
+          <div class="dealer-info">
+            <h2>Официальный дилер Danfoss</h2>
+            <p>
+              Компания Danfoss уже давно занимает лидирующие позиции в различных
+              отраслях промышленности России, и в качестве официального
+              представителя Danfoss мы готовы предложить вам лучшие условия
+              сотрудничества.
+            </p>
+            <p>
+              Наша компания предлагает полный ассортимент продукции Danfoss по
+              оптовым ценам. Мы гарантируем быструю и надежную поставку
+              оборудования Danfoss по всей России и СНГ. Выбирая нас, вы
+              получаете доступ к надежному и инновационному оборудованию
+              Danfoss. Сделайте выбор в пользу качества и надежности.
+            </p>
+          </div>
+          <div class="dealer-image-wrapper">
+            <img
+              src="img/Официальный дилер Danfoss.jpg"
+              alt="Официальный дилер Danfoss"
+              class="dealer-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="container">
+        <h2>Оборудование Danfoss-Sauer</h2>
+        <div class="products-grid">
+          <div class="product-item">
+            <img
+              src="img/Гидравлические моторы.png"
+              alt="Гидравлические моторы"
+              class="product-image"
+            />
+            <h3>Гидравлические моторы</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Гидравлические насосы.png"
+              alt="Гидравлические насосы"
+              class="product-image"
+            />
+            <h3>Гидравлические насосы</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Гидравлические распределители.png"
+              alt="Гидравлические распределители"
+              class="product-image"
+            />
+            <h3>Гидравлические распределители</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Частотные преобразователи.png"
+              alt="Частотные преобразователи"
+              class="product-image"
+            />
+            <h3>Частотные преобразователи</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Электроприводы.png"
+              alt="Электроприводы"
+              class="product-image"
+            />
+            <h3>Электроприводы</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Электронные регуляторы серии ECL Comfort.png"
+              alt="Электронные регуляторы серии ECL Comfort"
+              class="product-image"
+            />
+            <h3>Электронные регуляторы серии ECL Comfort</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Контроллеры.png"
+              alt="Контроллеры"
+              class="product-image"
+            />
+            <h3>Контроллеры</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Компрессоры.png"
+              alt="Компрессоры"
+              class="product-image"
+            />
+            <h3>Компрессоры</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Балансировочные и запорные клапаны.png"
+              alt="Балансировочные и запорные клапаны"
+              class="product-image"
+            />
+            <h3>Балансировочные и запорные клапаны</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="img/Регуляторы температуры и давления.png"
+              alt="Регуляторы температуры и давления"
+              class="product-image"
+            />
+            <h3>Регуляторы температуры и давления</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+          <div class="product-item">
+            <img src="img/Датчики.png" alt="Датчики" class="product-image" />
+            <h3>Датчики</h3>
+            <button class="btn request-btn">Отправить запрос</button>
+          </div>
+        </div>
+        <div class="products-note">
+          <h3>Более 100 наименований в наличии и под заказ</h3>
+          <p>Отправьте запрос и получите цену в течение 10 минут</p>
+          <button class="btn request-btn large">Отправить запрос</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="advantages-section">
+      <div class="container">
+        <h2>Приобретая продукцию Danfoss у нас вы получаете</h2>
+        <div class="advantages-grid">
+          <div class="advantage-item">
+            <img
+              src="img/Быстрый расчет стоимости.png"
+              alt="Быстрый расчет стоимости"
+              class="advantage-image"
+            />
+            <h3>Быстрый расчет стоимости</h3>
+            <p>
+              Наши менеджеры свяжутся с вами и предоставят информацию по
+              запрошенной продукции
+            </p>
+          </div>
+          <div class="advantage-item">
+            <img
+              src="img/Ускоренную доставку.png"
+              alt="Ускоренную доставку"
+              class="advantage-image"
+            />
+            <h3>Ускоренную доставку</h3>
+            <p>
+              Вся поставляемая продукция отправляется экспресс доставкой, что
+              позволяет нам сэкономить в сроках и доставить товар максимально
+              быстро
+            </p>
+          </div>
+          <div class="advantage-item">
+            <img
+              src="img/Гарантия 12 месяцев и сервис.png"
+              alt="Гарантия 12 месяцев и сервис"
+              class="advantage-image"
+            />
+            <h3>Гарантия 12 месяцев и сервис</h3>
+            <p>
+              Мы уверены в качестве продукции Danfoss, поэтому предоставляем
+              нашим клиентам гарантию на 12 месяцев, а также полноценную
+              поддержку и сервис
+            </p>
+          </div>
+          <div class="advantage-item">
+            <img
+              src="img/Цены от производителя.png"
+              alt="Цены от производителя"
+              class="advantage-image"
+            />
+            <h3>Цены от производителя</h3>
+            <p>
+              Наш статус официального поставщика позволяет нам предлагать
+              конкурентоспособные цены на продукцию Danfoss
+            </p>
+          </div>
+          <div class="advantage-item">
+            <img
+              src="img/Официальный поставщик.png"
+              alt="Официальный поставщик"
+              class="advantage-image"
+            />
+            <h3>Официальный поставщик</h3>
+            <p>
+              Вы получаете поставку от официального дилера Danfoss в России и
+              СНГ
+            </p>
+          </div>
+          <div class="advantage-item">
+            <img
+              src="img/Гибкие условия сотруднечества.png"
+              alt="Гибкие условия сотрудничества"
+              class="advantage-image"
+            />
+            <h3>Гибкие условия сотрудничества</h3>
+            <p>
+              Мы ценим каждого клиента и готовы предоставить выгодные условия и
+              нацелены на долгосрочное сотрудничество
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discount-section">
+      <div class="container">
+        <h2>
+          Ответьте на несколько простых вопросов и получите скидку 5% на первый
+          заказ
+        </h2>
+        <p class="discount-note">
+          Оставьте свой действующий номер телефона, за ним мы закрепим скидку 5%
+          на первый заказ
+        </p>
+
+        <div class="discount-form">
+          <form id="discount-form">
+            <div class="form-step active" data-step="1">
+              <h3>Какая продукция Danfoss вам нужна:</h3>
+              <div class="checkbox-group">
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Гидравлические моторы"
+                  />
+                  Гидравлические моторы</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Гидравлические насосы"
+                  />
+                  Гидравлические насосы</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Гидравлические распределители"
+                  />
+                  Гидравлические распределители</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Частотные преобразователи"
+                  />
+                  Частотные преобразователи</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Электроприводы"
+                  />
+                  Электроприводы</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Балансировочные и запорные клапаны"
+                  />
+                  Балансировочные и запорные клапаны</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Регуляторы температуры и давления"
+                  />
+                  Регуляторы температуры и давления</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Электронные регуляторы серии ECL Comfort"
+                  />
+                  Электронные регуляторы серии ECL Comfort</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="checkbox"
+                    name="product"
+                    value="Датчики"
+                  />
+                  Датчики</label
+                >
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn next-btn">Далее</button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <h3>Какой срок доставки для вас оптимальный:</h3>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="delivery" value="До 5дней" /> До 5
+                  дней</label
+                >
+                <label
+                  ><input type="radio" name="delivery" value="1-2 недели" /> 1-2
+                  недели</label
+                >
+                <label
+                  ><input type="radio" name="delivery" value="1 месяц" /> 1
+                  месяц</label
+                >
+                <label
+                  ><input type="radio" name="delivery" value="2-3 месяца" /> 2-3
+                  месяца</label
+                >
+                <label
+                  ><input type="radio" name="delivery" value="Любой срок" />
+                  Любой срок</label
+                >
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn back-btn">Назад</button>
+                <button type="button" class="btn next-btn">Далее</button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <h3>Как удобнее получить расчёт стоимости?</h3>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="contact" value="По телефону" /> По
+                  телефону</label
+                >
+                <label
+                  ><input type="radio" name="contact" value="В whatsapp" /> В
+                  whatsapp</label
+                >
+                <label
+                  ><input type="radio" name="contact" value="В Telegram" /> В
+                  Telegram</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="На электронную почту"
+                  />
+                  На электронную почту</label
+                >
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn back-btn">Назад</button>
+                <button type="button" class="btn next-btn">
+                  Последний вопрос
+                </button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+              <h3>Ваш телефон:</h3>
+              <div class="input-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 (___) ___-__-__"
+                  required
+                />
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn back-btn">Назад</button>
+                <button type="submit" class="btn submit-btn">Готово</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="orders" class="orders-section">
+      <div class="container wide-container">
+        <h2>Выполненные заказы в 2023 году</h2>
+        <div class="orders-gallery">
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(1).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(2).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(3).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(4).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+          </div>
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(5).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(6).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(7).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="img/Выполненные заказы в 2023 году(8).png"
+                alt="Выполненные заказы в 2023 году"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts-section">
+      <div class="container wide-container">
+        <h2>Контактная информация</h2>
+        <div class="contacts-content">
+          <div class="contact-info-wrapper">
+            <div class="contact-with-icon">
+              <i class="fab fa-whatsapp"></i>
+              <a
+                href="https://api.whatsapp.com/send/?phone=79955009032&text&type=phone_number&app_absent=0"
+                class="phone"
+                target="_blank"
+                >+7 (995) 500-90-32</a
+              >
+            </div>
+            <div class="contact-with-icon">
+              <i class="fab fa-telegram"></i>
+              <a href="https://t.me/danfossrus" class="phone" target="_blank"
+                >Telegram: @danfossrus</a
+              >
+            </div>
+            <p class="contact-label">Для звонков по России и СНГ</p>
+
+            <div class="office">
+              <h3 class="office-label">Центральный офис:</h3>
+              <p class="address">
+                Россия, г. Москва, Сокольническая пл., дом 4А
+              </p>
+            </div>
+
+            <a href="mailto:sales@danfossrus.com" class="email"
+              >sales@danfossrus.com</a
+            >
+
+            <div class="office-info">
+              <h3 class="office-label">Рабочее время:</h3>
+              <p class="office-hours">Пн-Пт: 09:00-18:00 (Мск)</p>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <h3>Оставьте нам запрос, <br />мы перезвоним в течение 10 минут</h3>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Ваше имя" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Ваш email" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="comment"
+                  placeholder="Комментарий"
+                  rows="2"
+                ></textarea>
+              </div>
+              <div class="form-group file-upload">
+                <label>Фото шильда/ТЗ:</label>
+                <button type="button" class="btn file-btn">
+                  Загрузить файлы
+                </button>
+                <input type="file" name="file" multiple style="display: none" />
+              </div>
+              <button type="submit" class="btn submit-btn">
+                Отправить запрос
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container wide-container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/Logo-Withe.png" alt="Danfoss Logo White" />
+          </div>
+          <div class="footer-info">
+            <a href="mailto:sales@danfossrus.com" class="footer-email"
+              >sales@danfossrus.com</a
+            >
+            <p class="copyright">&copy; 2023. Danfoss</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="contact-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Оставьте нам запрос, <br />мы перезвоним в течение 10 минут</h3>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Ваше имя" />
+          </div>
+          <div class="form-group">
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Номер телефона"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Ваш email" />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="comment"
+              placeholder="Комментарий"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="form-group file-upload">
+            <label>Фото шильда/ТЗ:</label>
+            <input type="file" name="file" multiple />
+          </div>
+          <button type="submit" class="btn submit-btn">Отправить запрос</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
