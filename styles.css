@@ -374,6 +374,8 @@ img {
 
 .slider-container {
   height: 100%;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -388,18 +390,20 @@ img {
   transition: opacity 0.5s ease;
   display: flex;
   align-items: center;
-  justify-content: left; /* Центрируем по горизонтали */
+  justify-content: center; /* Центрируем по горизонтали */
 }
 
 .slide.active {
   opacity: 1;
   z-index: 1;
 }
-
+.heading {
+  width: 50%;
+}
 .slide-content {
   position: relative;
   z-index: 2;
-  width: 50%;
+  width: 82%;
   padding: 0 50px;
   color: white;
   text-shadow: #000 0.5px 0.5px 5px;
@@ -434,7 +438,11 @@ img {
   width: 100%;
   height: 100%;
 }
-
+@media screen and (max-width: 1300px) {
+  .heading {
+    font-size: 120% !important;
+  }
+}
 .slide-bg img {
   width: 100%;
   height: 100%;
@@ -497,9 +505,11 @@ img {
 }
 
 .feature-text {
-  font-size: 140%;
+  font-size: 110%;
   width: 50%;
   display: flex;
+
+  justify-content: center;
   flex-direction: column;
   gap: 15px;
 }
@@ -527,7 +537,7 @@ img {
 }
 
 .dealer-content {
-  width: 70%;
+  width: 76.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -581,6 +591,9 @@ img {
   .dealer-content {
     flex-direction: column;
     align-items: center;
+  }
+  .slide-content {
+    width: 600px;
   }
 
   .dealer-info,
@@ -799,7 +812,7 @@ img {
     width: 70%;
   }
   .slide-content {
-    width: 70% !important;
+    width: 82% !important;
   }
   .feature-text {
     width: 70%;
@@ -846,7 +859,9 @@ img {
     justify-content: center;
     gap: 10px;
   }
-
+  .slide-content {
+    width: 600px !important;
+  }
   .header-contacts {
     flex-direction: column;
     align-items: center;
@@ -934,7 +949,16 @@ i.fas {
   font-size: 32px;
   margin-bottom: 40px;
 }
-
+@media screen and (max-width: 1920px) {
+  .last {
+    display: none;
+  }
+}
+@media screen and (max-width: 1620px) {
+  .last {
+    display: block;
+  }
+}
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -990,6 +1014,7 @@ i.fas {
 }
 
 .request-btn.large {
+  width: fit-content;
   font-size: 18px;
   padding: 15px 30px;
 }
@@ -1006,12 +1031,19 @@ i.fas {
 }
 
 .advantages-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
 }
 
 .advantage-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 30%;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
@@ -1026,7 +1058,7 @@ i.fas {
 
 .advantage-image {
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 15px;
   transition: transform 0.6s ease;
 }
@@ -1234,7 +1266,12 @@ i.fas {
   box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.2);
   outline: none;
 }
-
+.advantage-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
@@ -1248,6 +1285,7 @@ i.fas {
 }
 
 .contact-info-wrapper {
+  font-size: 140%;
   color: #fff;
   padding: 0;
   border-radius: 0;
@@ -1372,6 +1410,15 @@ copyright {
 
 /* Адаптивная верстка */
 @media screen and (max-width: 992px) {
+  .last {
+    display: none;
+  }
+  .advantage-image {
+    width: 375px;
+  }
+  .advantage-item {
+    width: 47%;
+  }
   .feature-content,
   .dealer-content {
     grid-template-columns: 1fr;
@@ -1391,6 +1438,13 @@ copyright {
 }
 
 @media screen and (max-width: 768px) {
+  .advantage-item {
+    width: 100%;
+  }
+  .textHH {
+    width: 80%;
+    text-align: center;
+  }
   .contact-form-wrapper h3 {
     font-size: 20px;
     text-align: center;

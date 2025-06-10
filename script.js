@@ -233,24 +233,40 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Анимация успешной отправки
       const submitBtn = this.querySelector(".submit-btn");
       const originalText = submitBtn.textContent;
 
+      // Визуальная обратная связь
       submitBtn.innerHTML = '<i class="fas fa-check"></i> Отправлено!';
       submitBtn.style.backgroundColor = "#28a745";
 
-      setTimeout(() => {
-        form.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.style.backgroundColor = "#e30613";
+      // Отправка данных через FormSubmit
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            setTimeout(() => {
+              form.reset();
+              submitBtn.textContent = originalText;
+              submitBtn.style.backgroundColor = "#e30613";
 
-        // Если форма в модальном окне, закрываем его
-        const modal = this.closest(".modal");
-        if (modal) {
-          modal.classList.remove("active");
-        }
-      }, 2000);
+              const modal = this.closest(".modal");
+              if (modal) modal.classList.remove("active");
+            }, 2000);
+          } else {
+            throw new Error("Ошибка отправки");
+          }
+        })
+        .catch((error) => {
+          submitBtn.textContent = "Ошибка!";
+          submitBtn.style.backgroundColor = "#dc3545";
+          console.error("Error:", error);
+        });
     });
   });
 

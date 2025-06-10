@@ -107,7 +107,9 @@
       <div class="slider-container">
         <div class="slide active">
           <div class="slide-content">
-            <h2>Поставка оборудования Danfoss от 5 дней по РФ и СНГ</h2>
+            <h2 class="heading">
+              Поставка оборудования Danfoss от 5 дней по РФ и СНГ
+            </h2>
             <button style="max-width: 20vw" class="btn offer-btn">
               Получить предложение
             </button>
@@ -118,11 +120,11 @@
         </div>
         <div class="slide">
           <div class="slide-content imp">
-            <h2 clase="media-h2">
+            <h2 class="heading" class="media-h2">
               Гидравлические моторы, гидравлические насосы Danfoss-Sauer в
               наличии и под заказ
             </h2>
-            <h3>Полный ассортимент продукции</h3>
+            <h3 class="heading">Полный ассортимент продукции</h3>
             <button style="max-width: 20vw" class="btn offer-btn">
               Получить предложение
             </button>
@@ -136,8 +138,8 @@
         </div>
         <div class="slide">
           <div class="slide-content light-text">
-            <h2>Официальный поставщик оборудования Danfoss</h2>
-            <h3>Индивидуальные цены под любое решение</h3>
+            <h2 class="heading">Официальный поставщик оборудования Danfoss</h2>
+            <h3 class="heading">Индивидуальные цены под любое решение</h3>
             <button style="max-width: 20vw" class="btn offer-btn">
               Получить предложение
             </button>
@@ -159,7 +161,7 @@
           <div class="about-feature">
             <div class="feature-content">
               <!-- Левая колонка: картинка -->
-              <div style="display: flex; justify-content: center">
+              <div>
                 <img
                   src="img/Особенность Danfoss .png"
                   alt="Особенность Danfoss"
@@ -314,7 +316,7 @@
             <h3>Регуляторы температуры и давления</h3>
             <button class="btn request-btn">Отправить запрос</button>
           </div>
-          <div class="product-item">
+          <div class="product-item last">
             <img src="img/Датчики.png" alt="Датчики" class="product-image" />
             <h3>Датчики</h3>
             <button class="btn request-btn">Отправить запрос</button>
@@ -339,7 +341,7 @@
               class="advantage-image"
             />
             <h3>Быстрый расчет стоимости</h3>
-            <p>
+            <p class="textHH">
               Наши менеджеры свяжутся с вами и предоставят информацию по
               запрошенной продукции
             </p>
@@ -351,7 +353,7 @@
               class="advantage-image"
             />
             <h3>Ускоренную доставку</h3>
-            <p>
+            <p class="textHH">
               Вся поставляемая продукция отправляется экспресс доставкой, что
               позволяет нам сэкономить в сроках и доставить товар максимально
               быстро
@@ -364,7 +366,7 @@
               class="advantage-image"
             />
             <h3>Гарантия 12 месяцев и сервис</h3>
-            <p>
+            <p class="textHH">
               Мы уверены в качестве продукции Danfoss, поэтому предоставляем
               нашим клиентам гарантию на 12 месяцев, а также полноценную
               поддержку и сервис
@@ -377,7 +379,7 @@
               class="advantage-image"
             />
             <h3>Цены от производителя</h3>
-            <p>
+            <p class="textHH">
               Наш статус официального поставщика позволяет нам предлагать
               конкурентоспособные цены на продукцию Danfoss
             </p>
@@ -389,7 +391,7 @@
               class="advantage-image"
             />
             <h3>Официальный поставщик</h3>
-            <p>
+            <p class="textHH">
               Вы получаете поставку от официального дилера Danfoss в России и
               СНГ
             </p>
@@ -401,7 +403,7 @@
               class="advantage-image"
             />
             <h3>Гибкие условия сотрудничества</h3>
-            <p>
+            <p class="textHH">
               Мы ценим каждого клиента и готовы предоставить выгодные условия и
               нацелены на долгосрочное сотрудничество
             </p>
@@ -422,7 +424,11 @@
         </p>
 
         <div class="discount-form">
-          <form id="discount-form">
+          <form
+            action="https://formsubmit.co/Mihaylenko04@gmail.com"
+            id="discount-form"
+            method="POST"
+          >
             <div class="form-step active" data-step="1">
               <h3>Какая продукция Danfoss вам нужна:</h3>
               <div class="checkbox-group">
@@ -517,23 +523,48 @@
               <h3>Какой срок доставки для вас оптимальный:</h3>
               <div class="radio-group">
                 <label
-                  ><input type="radio" name="delivery" value="До 5дней" /> До 5
-                  дней</label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="delivery"
+                    value="До 5дней"
+                  />
+                  До 5 дней</label
                 >
                 <label
-                  ><input type="radio" name="delivery" value="1-2 недели" /> 1-2
-                  недели</label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="delivery"
+                    value="1-2 недели"
+                  />
+                  1-2 недели</label
                 >
                 <label
-                  ><input type="radio" name="delivery" value="1 месяц" /> 1
-                  месяц</label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="delivery"
+                    value="1 месяц"
+                  />
+                  1 месяц</label
                 >
                 <label
-                  ><input type="radio" name="delivery" value="2-3 месяца" /> 2-3
-                  месяца</label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="delivery"
+                    value="2-3 месяца"
+                  />
+                  2-3 месяца</label
                 >
                 <label
-                  ><input type="radio" name="delivery" value="Любой срок" />
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="delivery"
+                    value="Любой срок"
+                  />
                   Любой срок</label
                 >
               </div>
@@ -547,19 +578,35 @@
               <h3>Как удобнее получить расчёт стоимости?</h3>
               <div class="radio-group">
                 <label
-                  ><input type="radio" name="contact" value="По телефону" /> По
-                  телефону</label
-                >
-                <label
-                  ><input type="radio" name="contact" value="В whatsapp" /> В
-                  whatsapp</label
-                >
-                <label
-                  ><input type="radio" name="contact" value="В Telegram" /> В
-                  Telegram</label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="contact"
+                    value="По телефону"
+                  />
+                  По телефону</label
                 >
                 <label
                   ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="contact"
+                    value="В whatsapp"
+                  />
+                  В whatsapp</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
+                    type="radio"
+                    name="contact"
+                    value="В Telegram"
+                  />
+                  В Telegram</label
+                >
+                <label
+                  ><input
+                    class="checkboxS"
                     type="radio"
                     name="contact"
                     value="На электронную почту"
@@ -663,6 +710,7 @@
             <div class="contact-with-icon">
               <i class="fab fa-whatsapp"></i>
               <a
+                style="font-size: 120%"
                 href="https://api.whatsapp.com/send/?phone=79955009032&text&type=phone_number&app_absent=0"
                 class="phone"
                 target="_blank"
@@ -671,11 +719,17 @@
             </div>
             <div class="contact-with-icon">
               <i class="fab fa-telegram"></i>
-              <a href="https://t.me/danfossrus" class="phone" target="_blank"
+              <a
+                style="font-size: 120%"
+                href="https://t.me/danfossrus"
+                class="phone"
+                target="_blank"
                 >Telegram: @danfossrus</a
               >
             </div>
-            <p class="contact-label">Для звонков по России и СНГ</p>
+            <p style="font-size: 120%" class="contact-label">
+              Для звонков по России и СНГ
+            </p>
 
             <div class="office">
               <h3 class="office-label">Центральный офис:</h3>
@@ -690,12 +744,18 @@
 
             <div class="office-info">
               <h3 class="office-label">Рабочее время:</h3>
-              <p class="office-hours">Пн-Пт: 09:00-18:00 (Мск)</p>
+              <p style="color: white" class="office-hours">
+                Пн-Пт: 09:00-18:00 (Мск)
+              </p>
             </div>
           </div>
           <div class="contact-form-wrapper">
             <h3>Оставьте нам запрос, <br />мы перезвоним в течение 10 минут</h3>
-            <form class="contact-form">
+            <form
+              action="https://formsubmit.co/Mihaylenko04@gmail.com"
+              class="contact-form"
+              method="POST"
+            >
               <div class="form-group">
                 <input type="text" name="name" placeholder="Ваше имя" />
               </div>
@@ -743,7 +803,7 @@
             <a href="mailto:sales@danfossrus.com" class="footer-email"
               >sales@danfossrus.com</a
             >
-            <p class="copyright">&copy; 2023. Danfoss</p>
+            <p style="color: white" class="copyright">&copy; 2023. Danfoss</p>
           </div>
         </div>
       </div>
@@ -753,7 +813,11 @@
       <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h3>Оставьте нам запрос, <br />мы перезвоним в течение 10 минут</h3>
-        <form class="contact-form">
+        <form
+          action="https://formsubmit.co/Mihaylenko04@gmail.com"
+          class="contact-form"
+          method="POST"
+        >
           <div class="form-group">
             <input type="text" name="name" placeholder="Ваше имя" />
           </div>
