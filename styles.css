@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.highImg {
+  height: 500px !important;
+  object-fit: fill !important;
+}
 .activeS {
   display: flex;
 
@@ -366,7 +370,7 @@ img {
 /* Слайдер */
 .hero-slider {
   position: relative;
-  min-height: 400px; /* Устанавливаем минимальную высоту вместо фиксированной */
+  min-height: 500px; /* Устанавливаем минимальную высоту вместо фиксированной */
   height: auto; /* Позволяем растягиваться по содержимому */
   overflow: hidden;
   margin-top: 20px;
@@ -439,8 +443,29 @@ img {
   height: 100%;
 }
 @media screen and (max-width: 1300px) {
+  .slider-container {
+    height: 500px !important;
+  }
+  .slide {
+    height: 500px !important;
+  }
+  .slide-bg {
+    height: 500px !important;
+  }
+  .highImg {
+    height: 500px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .hero-slider {
+    min-height: 500px !important;
+  }
   .heading {
     font-size: 120% !important;
+  }
+  .slider-controls {
+    display: none !important;
   }
 }
 .slide-bg img {
@@ -697,6 +722,7 @@ img {
   .hero-slider {
     min-height: 250px; /* Ещё меньше для маленьких экранов */
     margin-top: 140px;
+    padding-top: 0px;
   }
 
   .slide {
@@ -973,6 +999,9 @@ i.fas {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-item:hover {
@@ -989,11 +1018,16 @@ i.fas {
 .product-item h3 {
   font-size: 18px;
   margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .request-btn {
   background-color: #e30613;
   color: white;
+  margin-top: auto;
 }
 
 .products-note {
@@ -1510,6 +1544,9 @@ section {
 }
 
 @media screen and (max-width: 767px) {
+  .hero-slider {
+    padding-top: 0px !important;
+  }
   .about-section {
     padding-top: 10px;
   }
@@ -1605,6 +1642,9 @@ section {
 
 @media screen and (max-width: 479px) {
   /* Экстремально маленькие экраны */
+  .hero-slider {
+    padding-top: 0px !important;
+  }
   body {
     padding-top: 60px;
   }
